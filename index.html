@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Functions</title>
+    <script src="cyberfunctions.js" defer></script>
+    <style>
+        .task{
+            background-color: blue;
+            color:azure;
+            padding: 5px;
+            margin: 5px;
+        }
+      .definition {
+        background-color: beige;
+        border-radius: 15px;
+        width: 300px;
+        height: 55px;
+      }
+      header {
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        background-color: #990000;
+        color: #ebedec;
+        font-size: 2em;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        background-color: #ebedec;
+        color: #990000;
+        margin: 3px;
+      }
+      .flexterms {
+        display: inline-flex;
+        flex-direction: row;
+        flex: 0 0 100px;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 10px;
+      }
+      article {
+        flex: 0 0 500px;
+        border: 5px dashed green;
+        width: 500px;
+        margin: 10px;
+        padding: 5px;
+      }
+
+      .articles {
+          display: flex;
+          flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Cybersecurity Functions</header>
+
+    <div>
+      <p>
+        Cybersecurity has become increasingly important, especially over the
+        last 5 years. Use this exercise to learn about cybercrime and review how
+        to implement functions in JavaScript.
+      </p>
+    </div>
+
+    <div class="articles">
+    <article>
+
+      <div class="task">Modify function <i>getdef</i> to include functionality for interception.</div>
+      <div>(Task #1) What is ... click to find out!</div>
+      <div class="flexterms">
+        <button id="malware" onclick="getdef(0)">Malware</button>
+        <button id="intrusion" onclick="getdef(1)">An Intrusion</button>
+        <button id="interception" onclick="getdef(2)">
+          Interception Attack
+        </button>
+        <div class="definition" id="task1_display"></div>
+      </div>
+    </article>
+
+    <article>
+        <div class="task">Modify function <i>checkEvenOrOdd</i> to check the number and report</div>
+      <div>(Task #2) Deciphering Codes</div>
+      <p>Sometimes an access code can be filtered on a simple basis - like whether it is even or odd. Fill in the code required to determine if a number is oven or odd. Report this in the display area.</p>
+      <label for="code"
+        >Numeric Code: <input type="text" id="numericcode"
+      /></label>
+      <div>
+        <button id="checknumber" onclick="checkEvenOrOdd()">
+          Check the number
+        </button>
+        <p class="definition" style="display:inline;" id="task2_display"></p>
+      </div>
+    </article>
+
+    <article>
+        <div class="task">Modify function <i>addTheDigits</i> to add the digits in a number</div>
+        <div>(Task #3) Add up all the digits</div>
+        <p>An additional check can be made on a number to verify that it is a valid code. All the digits added together represents a <i>checksum</i>. Fill in the code for adding all the digits in a number, and display the result in the display area.</p>
+        <label for="code"
+          >Number: <input type="text" id="digits"
+        /></label>
+        <div>
+          <button id="adddigits" onclick="addTheDigits()">
+            Add Digits
+          </button>
+          <p style="display:inline;" id="task3_display"></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="task">Modify function <i>convertFromBinary</i>and <i>binToDec</i> to convert and display the number</div>
+        <div>(Task #4) Convert Binary To Decimal</div>
+        <p>Sometimes codes represented in binary have to be translated to decimal so they can be checked against codes in a table. Complete the code for converting a binary number to decimal.</p>
+        <label for="binnumber"
+          >Number: <input type="text" id="binnumber"
+        /></label>
+        <div>
+          <button id="converttodec" onclick="convertFromBinary()">
+            Convert to Decimal
+          </button>
+          <p style="display:inline;" id="task4_display"></p>
+        </div>
+      </article>
+
+      <article style="flex: 0 0 700px;">
+        <div class="task">Determine what you should modify and add to make this work.</div>
+        <div>(Task #5) Call a function ... from a Callback Function</div>
+          <div class="flexterms">
+            <button id="fbi" onclick="what_is(fbi_info)">FBI</button>
+            <button id="unitednations" onclick="what_is(un_info)">United Nations</button>
+            <button id="homelandsecurity" onclick="what_is(homeland_info)">
+              Homeland Security
+            </button>
+            <p id = "task5_display"></p>
+          </div>
+      </article>
+    </div>
+  </body>
+</html>
